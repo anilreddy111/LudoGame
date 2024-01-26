@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #main{
+            width: 450px;
+            margin: 20px auto;
+            border: 2px solid;
+        }
+        .pawns{
+            width: 30px;
+            height: 30px;
+            border: 2px solid;
+            border-radius: 30px;
+            position:absolute;
+        }
+        #board{   
+        height: 450px;
+        width: 100%;
+        background-image: url('./Images/ludo-bg.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        }
+        #playerid{
+            color: blue;
+            font: 2rem sans-serif;    
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p id="playerid">redpawn</p>
+    </div>
+    <div id="main">
+    <div id="board">
+    <!-- <div class="pawns" style="background-color: black; left: 650px;"></div> -->
+    <div class="pawns" id="redpawn1"  onclick="move('redpawn',1)"  style="background-color:red;top:45px;left:313px;"></div>
+    <div class="pawns" id="redpawn2"  onclick="move('redpawn',2)"      style="background-color:red;top:102px;left:313px;"></div>
+    <div class="pawns" id="redpawn3"  onclick="move('redpawn',3)"      style="background-color:red;top:45px;left:375px;"></div>
+    <div class="pawns" id="redpawn4"  onclick="move('redpawn',4)"      style="background-color:red;top:102px;left:375px;"></div>
+
+    <div class="pawns" id="yellowpawn1" onclick="move('yellowpawn',1)"    style="background-color:yellow;top:315px;left:40px;"></div>
+    <div class="pawns" id="yellowpawn2" onclick="move('yellowpawn',2)"    style="background-color:yellow;top:372px;left:105px;"></div>
+    <div class="pawns" id="yellowpawn3" onclick="move('yellowpawn',3)"    style="background-color:yellow;top:315px;left:105px;"></div>
+    <div class="pawns" id="yellowpawn4" onclick="move('yellowpawn',4)"    style="background-color:yellow;top:372px;left:40px;"></div>
+</div>
+    </div>
+    <div id="dice" onclick="randomNum()" style="background-image:url(Images/dice.gif);background-size:contain; width:150px;height:150px; margin-left: 45%;"></div>
+    <script  src="./index.js"></script>
+</body>
+</html>
